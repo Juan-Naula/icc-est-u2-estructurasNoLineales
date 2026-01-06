@@ -1,8 +1,9 @@
 package trees;
 
+import models.Persona;
 import nodes.Node;
 
-public class Tree<T> {
+public class Tree<T extends Comparable<T>> {
     private Node <T> root;
 
     public Tree() {
@@ -14,6 +15,65 @@ public class Tree<T> {
     }
     
     private Node<T> insertRecursive(Node<T> current, T value){
-        return null;
+         if (current == null) {
+            return new Node<>(value);
+        }
+        if (value.compareTo(current.getValue()) < 0) {
+            current.setLeft(insertRecursive(current.getLeft(), value));
+        } else if (value.compareTo(current.getValue()) > 0) {
+            current.setRight(insertRecursive(current.getRight(), value));
+        }
+        return current;
+    }
+
+    public void inOrder(){
+        inOrderRecursive(root);
+    }
+
+    private void inOrderRecursive(Node<T> node){
+        if (node != null) {
+            inOrderRecursive(node.getLeft());
+            System.out.println(node.getValue() + " ");
+            inOrderRecursive(node.getRight());
+        }
+    }
+
+    public T searchByAge(int i) {
+        T resul = searchByAgeRecursive(root, i);
+        return resul;
+    }
+
+    private T searchByAgeRecursive(Node<T> current, int edad){
+        if(current == null){
+            return null;
+        }
+        Persona persona = (Persona) current.getValue();
+        if (edad == persona.getEdad()) {
+            return current.getValue();
+        }
+
+        if (edad < persona.getEdad()) {
+            return searchByAgeRecursive(current.getLeft(), edad);
+        } else {
+            return searchByAgeRecursive(current.getRight(), edad);
+        }
+    }
+
+    public T search(T value){
+        return searchRecursive(root, value);
+    }
+
+    private T searchRecursive(Node<T> current, T value) {
+        if (current == null) {
+            return null;
+        }
+        if (value.compareTo(current.getValue()) == 0) {
+            return current.getValue();
+        }
+        if (value.compareTo(current.getValue()) < 0) {
+            return searchRecursive(current.getLeft(), value);
+        } else {
+            return searchRecursive(current.getRight(), value);
+        }
     }
 }

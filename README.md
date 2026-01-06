@@ -21,3 +21,20 @@ Inserta aquí una segunda captura si aplica.
 - Archivo: ![alt text](assets/Size1.png)
 ![alt text](assets/Size2.png)
 ![alt text](assets/Size3.png)
+
+##  Practica Arboles - Implementacion Genericos uso de interfaces Comparable - 06/01/26
+- Práctica: [Arboles - Interface Comparable]
+- Fecha: [2026-01-06]
+
+## Descripción
+Se completaron las clase de Persona y Tree, agregando en persona un ToString y un ComparableTo, en Tree lo que se hizo fue completar los metodos de insert y se agrego el InOrder y tambien se agregaron los metodos de busqueda
+## Evidencias
+### Captura 1
+Inserta aquí la captura del código o de la ejecución.
+- Archivo: ![alt text](assets/Ejecucion2.png)
+
+### Captura 2 
+Inserta aquí una segunda captura si aplica.
+- Archivo: ![alt text](assets/CompareTo.png)
+![alt text](assets/Insert.png)
+![alt text](assets/Searchs.png)
