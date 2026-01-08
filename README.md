@@ -38,3 +38,19 @@ Inserta aquí una segunda captura si aplica.
 - Archivo: ![alt text](assets/CompareTo.png)
 ![alt text](assets/Insert.png)
 ![alt text](assets/Searchs.png)
+
+##  Practica Grafos - 08/01/26
+- Práctica: [Grafos]
+- Fecha: [2026-01-06]
+
+## Descripción
+Se agrego la clase Graph y se le añadio sus respectivos metodos
+## Evidencias
+### Captura 1
+Inserta aquí la captura del código o de la ejecución.
+- Archivo: ![alt text](assets/EjecucionGraph.png)
+
+### Captura 2 
+Inserta aquí una segunda captura si aplica.
+- Archivo: ![alt text](assets/MetodoRealizado.png)
+

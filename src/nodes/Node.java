@@ -1,4 +1,8 @@
 package nodes;
+
+import java.util.List;
+import java.util.Map;
+
 public class Node<T> {
     private T value;
     private Node <T> left;
@@ -34,6 +38,12 @@ public class Node<T> {
         this.right = right;
     }
 
+    @Override
+    public String toString() {
+        return "N[" + value + "]";
+    }
+
+    
     
     
 }
